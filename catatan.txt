@@ -1,0 +1,35 @@
+>>>Setup prisma for BE:
+Installation prisma:
+1. Install require library
+>> npm i --save-dev prisma typescript ts-node @types/node nodemon
+
+2. Buat file tsconfig.ts kemudian copy code berikut ( you can get it through documentation):
+https://www.prisma.io/docs/getting-started/quickstart
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "dist",
+    "strict": true,
+    "lib": ["esnext"],
+    "esModuleInterop": true
+  }
+}
+
+3. Initialize prisma:
+>> npx prisma init --datasource-provider mysql || "or" postgresql
+
+4. Install prisma (module) in vscode to get format highliting in file with type prisma
+
+5. Auto formatting in prima you can run in your terminal:
+>> npx prisma format
+
+6. Create sechema in file prisma/schema.prisma:
+    model User {
+      id       String @id @default(cuid())
+      username String @unique
+      password String
+    }
+
+7. Migrate the schema to database (mysql):
+>> npx prisma migrate dev --name init
+
