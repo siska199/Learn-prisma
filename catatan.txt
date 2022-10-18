@@ -33,3 +33,7 @@ https://www.prisma.io/docs/getting-started/quickstart
 7. Migrate the schema to database (mysql):
 >> npx prisma migrate dev --name init
 
+8. buak file to connect with the db:
+prismadb.ts
+const prisma = new PrismaClient()
+export default prisma
