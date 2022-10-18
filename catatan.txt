@@ -1,7 +1,12 @@
 >>>Setup prisma for BE:
+ref : https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases-typescript-postgres
+//Reference about command in prisma
+https://www.prisma.io/docs/concepts/components/prisma-client/crud
+https://www.prisma.io/docs/concepts/components/prisma-client/filtering-and-sorting
 Installation prisma:
 1. Install require library
 >> npm i --save-dev prisma typescript ts-node @types/node nodemon
+>> npm i  @prisma/client
 
 2. Buat file tsconfig.ts kemudian copy code berikut ( you can get it through documentation):
 https://www.prisma.io/docs/getting-started/quickstart
